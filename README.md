@@ -27,3 +27,5 @@ You should create one R script called run_analysis.R that does the following.
 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+### Notes
+The data found [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) should be saved within the working directory before running the R script.
