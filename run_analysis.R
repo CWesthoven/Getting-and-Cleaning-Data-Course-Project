@@ -12,17 +12,17 @@
 # 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 
+# Clean up workspace
+rm(list=ls())
+
 # 1. Merge the training and the test sets to create one data set.
 
-#set working directory to the location where the UCI HAR Dataset was unzipped
-setwd('C:/Users/craig.westhoven/Desktop/Coursera/UCI HAR Dataset/');
-
 # Read Train data from files
-Features <- read.table('./features.txt',header=FALSE);
-ActivityType <- read.table('./activity_labels.txt',header=FALSE);
-SubjectTrain <- read.table('./train/subject_train.txt',header=FALSE);
-xTrain <- read.table('./train/x_train.txt',header=FALSE);
-yTrain <- read.table('./train/y_train.txt',header=FALSE);
+Features <- read.table('./UCI HAR Dataset/features.txt',header=FALSE);
+ActivityType <- read.table('./UCI HAR Dataset/activity_labels.txt',header=FALSE);
+SubjectTrain <- read.table('./UCI HAR Dataset/train/subject_train.txt',header=FALSE);
+xTrain <- read.table('./UCI HAR Dataset/train/x_train.txt',header=FALSE);
+yTrain <- read.table('./UCI HAR Dataset/train/y_train.txt',header=FALSE);
 
 # Add Column Names
 colnames(ActivityType) <- c('activityId','activityType');
@@ -34,9 +34,9 @@ colnames(yTrain) <- "activityId";
 trainingData <- cbind(yTrain,SubjectTrain,xTrain);
 
 # Read in the test data
-SubjectTest <- read.table('./test/subject_test.txt',header=FALSE);
-xTest <- read.table('./test/x_test.txt',header=FALSE);
-yTest <- read.table('./test/y_test.txt',header=FALSE);
+SubjectTest <- read.table('./UCI HAR Dataset/test/subject_test.txt',header=FALSE);
+xTest <- read.table('./UCI HAR Dataset/test/x_test.txt',header=FALSE);
+yTest <- read.table('./UCI HAR Dataset/test/y_test.txt',header=FALSE);
 
 # Add column names to the test data
 colnames(SubjectTest) <- "subjectId";
