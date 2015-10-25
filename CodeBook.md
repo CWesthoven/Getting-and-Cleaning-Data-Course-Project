@@ -17,3 +17,15 @@ The script `run_analysis.R`performs the 5 steps described in the course project'
 * Character: `colNames` contains the correct names for `xTest` the dataset, which are applied to the column names stored in `finalData`
 * Character: A similar approach is taken with activity names through the `ActivityType` variable.
 * numeric: `finalDataNoActivityType` contains the relevant averages which will be later stored in a `tidyData.txt` file.
+
+### Create a tidy data set
+
+From the `finalDataNoActivityType` data set is created a `tidyData` data set where numeric
+variables are averaged for each activity and each subject.
+
+The tidy data set contains 10299 observations with 81 variables divided in:
+
+*  an activity label (__Activity__): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+*  an identifier of the subject who carried out the experiment (__Subject__):
+   1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30
+*  a 79-feature vector with time and frequency domain signal variables (__Numeric__)
